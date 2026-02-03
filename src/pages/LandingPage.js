@@ -22,9 +22,11 @@ return(
     <div className="justify-items-center mt-3">
         
         <ImageSlider/>
-        <TodaysDeal/>
-        <Tabs />
+        {/* <TodaysDeal/> */}
         <SimilarProducts cats='women'/>
+        <h1 className="text-3xl"> Our Vision:</h1>
+        <Tabs />
+        
         
     </div>
     <Footer/>

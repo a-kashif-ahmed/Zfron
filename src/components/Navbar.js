@@ -61,7 +61,7 @@ function Navbar() {
    return (
       <div className="relative w-full overflow-hidden">
          {/* Decorative Background Shapes */}
-         <div className="absolute inset-0 z-0 pointer-events-none">
+         <div className="absolute z-20 pointer-events-none">
             {/* Circles */}
 
 
@@ -71,7 +71,7 @@ function Navbar() {
          </div>
 
          {/* Foreground Content */}
-         <div className="relative z-10 flex justify-center items-center py-12 px-4">
+         {/*<div className="relative z-10 flex justify-center items-center py-12 px-4">
             <Carousel
                className="m-2 car"
                autoPlay
@@ -94,10 +94,10 @@ function Navbar() {
                   </div>
                ))}
             </Carousel>
-         </div>
-         <nav class=" block w-full bg-secondary  px-4 py-2 mx-auto bg-white shadow-md rounded-md lg:px-8 lg:py-3 mt-10">
+         </div> */}
+         <nav class=" fixed w-full bg-transparent backdrop-blur-sm  px-4 py-2 mx-auto  shadow-md rounded-md lg:px-8 lg:py-3 m-10 mt-0 ">
             <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-               <a href="/" class=" hover:text-white hover:scale-120 mr-4 text-white font-bold block cursor-pointer py-1.5 text-base text-slate-800 ">
+               <a href="/" class=" hover:text-black hover:scale-120 mr-4 text-black font-bold block cursor-pointer py-1.5 text-base text-slate-800 ">
                   Zocosto
                </a>
 
@@ -105,21 +105,21 @@ function Navbar() {
                   <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
-                        <a href="/" class="flex items-center text-white hover:text-white hover:scale-120">
+                        <a href="/" class="flex items-center text-black hover:text-black hover:scale-120">
                            Home
                         </a>
                      </li>
                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white">
 
 
-                        <a href="/about" class="flex items-center text-white hover:text-white hover:scale-120">
+                        <a href="/about" class="flex items-center text-black hover:text-black hover:scale-120">
                            About Us
                         </a>
                      </li>
                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white">
 
 
-                        <a href="/products" class="flex items-center text-white hover:text-white hover:scale-120 ">
+                        <a href="/products" class="flex items-center text-black hover:text-black hover:scale-120 ">
                            Products
                         </a>
                      </li>
@@ -128,7 +128,7 @@ function Navbar() {
                         <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
 
-                           <a href="/products/myproducts" class="flex items-center text-white hover:text-white hover:scale-120">
+                           <a href="/products/myproducts" class="flex items-center text-black hover:text-black hover:scale-120">
                               My Products
                            </a>
                         </li>
@@ -137,7 +137,7 @@ function Navbar() {
                         <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
 
-                           <a href="/vendor" class="flex items-center text-white hover:text-white hover:scale-120">
+                           <a href="/vendor" class="flex items-center text-black hover:text-black hover:scale-120">
                               Vendor Panel
                            </a>
                         </li>
@@ -146,7 +146,7 @@ function Navbar() {
                         <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
 
-                           <a href="/order/myorders" class="flex items-center text-white hover:text-white hover:scale-120">
+                           <a href="/order/myorders" class="flex items-center text-black hover:text-black hover:scale-120">
                               My Orders
                            </a>
                         </li>
@@ -155,7 +155,7 @@ function Navbar() {
                         <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
 
-                           <a href="/admin" class="flex items-center text-white hover:text-white hover:scale-120">
+                           <a href="/admin" class="flex items-center text-black hover:text-black hover:scale-120">
                               Admin Panel
                            </a>
                         </li>
@@ -163,7 +163,7 @@ function Navbar() {
                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600  hover:border-b-2 border-white ">
 
 
-                        <a href="/category" class="flex items-center text-white hover:text-white hover:scale-120">
+                        <a href="/category" class="flex items-center text-black hover:text-black hover:scale-120">
                            Category
                         </a>
                      </li>
@@ -177,7 +177,7 @@ function Navbar() {
                            >
                               <input
                                  type="text"
-                                 className="searchbar text-white px-2 py-1 rounded border border-white bg-transparent focus:outline-none"
+                                 className="searchbar text-black px-2 py-1 rounded border border-white bg-transparent focus:outline-none"
                                  placeholder="Search products..."
                                  value={searchtext}
                                  onChange={(e) => setSearchtext(e.target.value)}
@@ -208,7 +208,7 @@ function Navbar() {
                      {!logser ? (
                         <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 hover:border-b-2 border-white">
                            <select
-                              className="text-white bg-secondary"
+                              className="text-black bg-transparent"
                               defaultValue=""
                               onChange={(e) => {
                                  const val = e.target.value;
@@ -224,7 +224,7 @@ function Navbar() {
                         <li
                            class="flex  dropdown max-w-32 items-center p-1 text-sm gap-x-2 text-slate-600">
 
-                           <a href="/profile" alt="profile" class="flex items-center text-white hover:text-white hover:scale-120">{logser} &nbsp; <img src={avayar} width="22%" height="22%" style={{ borderRadius: '2%' }} />
+                           <a href="/profile" alt="profile" class="flex items-center text-black hover:text-black hover:scale-120">{logser} &nbsp; <img src={avayar} width="22%" height="22%" style={{ borderRadius: '2%' }} />
 
                            </a>
                         </li>
@@ -238,7 +238,7 @@ function Navbar() {
                            <li
                               class="flex items-center p-1 text-sm gap-x-2 text-slate-600 max-w-10">
 
-                              <a href="/cart/all" class="flex items-center text-white"><img src={cartpng} width='100%' height='10%' alt="cart"></img>
+                              <a href="/cart/all" class="flex items-center text-black"><img src={cartpng} width='100%' height='10%' alt="cart"></img>
                               </a>
                            </li>
 
@@ -246,7 +246,7 @@ function Navbar() {
 
                      )}
                      {!logser ? (<li></li>) : (<li class="flex items-center p-1 text-sm gap-x-2 text-slate-600 max-w-10">
-                        <a href='' class="flex items-center text-white" onClick={handleLogout}>Logout</a>
+                        <a href='' class="flex items-center text-black" onClick={handleLogout}>Logout</a>
                      </li>)}
                   </ul>
                </div>
