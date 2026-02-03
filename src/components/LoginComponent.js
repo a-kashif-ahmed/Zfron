@@ -50,7 +50,7 @@ setLoading(true);
   };
 
   return (
-    <div className="origin-center">
+    <div className="origin-center mt-30">
       
 
       <div className="logform">

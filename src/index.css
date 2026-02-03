@@ -122,11 +122,23 @@ form td input {}
 }
 
 .loguser button.active {
-  background-color: rgb(77, 135, 221);
-  color: bisque;
+  background: rgba(255, 255, 255, 0.25); /* translucent glass */
+  color: #000;
   font-size: large;
-  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+  transition: all 0.25s ease;
 }
+
 
 .logform input {
   margin: 10%;

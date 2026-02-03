@@ -8,7 +8,7 @@ function AuthAv(){
     const [pap,setPap] = useState('signup');
 
     return(
-        <div>
+        <div className="mt-20">
             <Navbar/>
             <div className="loguserab">
             <div className="loguser" >

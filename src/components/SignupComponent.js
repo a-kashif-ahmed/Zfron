@@ -95,7 +95,7 @@ const handleEmailOtp = async()=>{
 
 
   return (
-    <div className="origin-center">
+    <div className="origin-center mt-30">
 
       <div className="logform back-shadow">
         <form action={`${BackendURL}/auth/signup`} method="post" encType="multipart/form-data">
