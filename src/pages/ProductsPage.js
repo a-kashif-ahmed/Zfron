@@ -8,6 +8,7 @@ import { useLoader } from "../components/LoaderContext.js";
 import leftarrow from "../public/arrow-left.png"
 import rightarrow from "../public/arrow-right.png"
 import { useLocation } from 'react-router-dom';
+import { getProducts } from "../services/productsServices.js";
 
 function ProductsPage() {
   const query = new URLSearchParams(useLocation().search);
@@ -38,21 +39,25 @@ function ProductsPage() {
     setLoading(false);
   };
   useEffect(() => {
+    getProducts().then((data) => setProds(data));
+    console.log(prods);
+  }, []);
+//   useEffect(() => {
 
-    setLoading(true);
-    fetch(`${BackendURL}/items/pros`)
-      .then((response) => response.json())
-      .then((data) => {
- const filtered = data.filter(product =>
-          product.productName.toLowerCase().includes(searchTerm)
-                 );
-        setProds(filtered);
-        console.log(data);
-      })
-      .catch((err) => console.error("Fetch error:", err));
+//     setLoading(true);
+//     fetch(`${BackendURL}/items/pros`)
+//       .then((response) => response.json())
+//       .then((data) => {
+//  const filtered = data.filter(product =>
+//           product.productName.toLowerCase().includes(searchTerm)
+//                  );
+//         setProds(filtered);
+//         console.log(data);
+//       })
+//       .catch((err) => console.error("Fetch error:", err));
 
-    setLoading(false);
-  }, [searchTerm,BackendURL])
+//     setLoading(false);
+//   }, [searchTerm,BackendURL])
   const totalPages = Math.ceil(prods.length / productsPerPage);
   const startIdx = (currentPage - 1) * productsPerPage;
   const currentProducts = prods.slice(startIdx, startIdx + productsPerPage);
@@ -68,7 +73,7 @@ function ProductsPage() {
           <a href="/products/myproducts">My products</a>
         </li>
       </nav> */}
-      {!searchTerm ? <TodaysDeal /> : <></>}
+      {/* {!searchTerm ? <TodaysDeal /> : <></>} */}
       <div>
         <h1 className="text-center  text-3xl text-black m-20">Products</h1>
       </div>
@@ -81,7 +86,7 @@ function ProductsPage() {
                <div className=" m-7 w-60 border border-gray-400 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <img
                     className="w-full h-80 object-cover"
-                    src={`${BackendURL}${product.images[0]}`}
+                    src={`${product.images[0]}`}
                     alt={product.productName || "Product"}
                   />
                   <div className="px-4 py-3">

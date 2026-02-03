@@ -1,6 +1,6 @@
 function Tabs() {
   return (
-    <div className="w-full flex justify-center mt-10">
+    <div className="relative w-full flex justify-center mt-10">
       <div className="flex flex-wrap justify-center gap-5 max-w-6xl">
         {/* Card 1 */}
         <div className="relative w-[270px] border border-black p-7 bg-white hover:shadow-lg overflow-hidden rounded-lg">

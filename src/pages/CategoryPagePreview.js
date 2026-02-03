@@ -17,11 +17,11 @@ function CategoryPagePreview() {
     return (
         <div>
             <Navbar />
-            <h1 className=" m-3 text-center  text-6xl">Categories</h1>
+            <h1 className=" m-3 mt-15 text-center  text-6xl">Categories</h1>
             <div className="flex flex-wrap justify-center mt-10">
                  <div
                     onClick={()=>handleCardClick("All")}
-                    className=" m-7 relative cursor-pointer max-w-sm bg-white border-1 border-black rounded-lg shadow-sm overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                    className=" m-7 relative cursor-pointer max-w-sm bg-white border-1 border-black rounded-lg shadow-sm overflow-hidden group hover:shadow-xl transition-shadow duration-300 z-0">
                     <img
                         className="w-full h-64 object-cover rounded-lg"
                         src={collage}

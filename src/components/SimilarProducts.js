@@ -26,7 +26,7 @@ useEffect(() => {
             // .filter((product) => product.productCategory === cats)
             .map((product) => (
               <Link to={`/products/${product._id}`} key={product._id}>
-                <div className=" m-7 w-60 border border-gray-400 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className=" m-7 w-60 border border-gray-400 rounded-xl overflow-hidden hover:shadow-xl transition-shadow  duration-300">
                   <img
                     className="w-full h-80 object-cover"
                     src={`${product.images[0]}`}
