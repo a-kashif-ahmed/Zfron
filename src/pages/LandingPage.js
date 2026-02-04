@@ -24,7 +24,7 @@ return(
         <ImageSlider/>
         {/* <TodaysDeal/> */}
         <SimilarProducts cats='women'/>
-        <h1 className="text-3xl"> Our Vision:</h1>
+        <h1 className="text-3xl mt-10"> Our Vision:</h1>
         <Tabs/>
         
         
