@@ -77,38 +77,62 @@ function ProductsPage() {
       <div>
         <h1 className="text-center  text-3xl text-black m-20">Products</h1>
       </div>
-      <div className="flex flex-wrap justify-center" style={{ width: '100%' }}>
-        {prods.length === 0 ? (
-          <p className="text-center">No products found</p>
-        ) : (
-          currentProducts.filter(product => product.isStock=== true).map((product) => (
-            <Link to={`/products/${product._id}`} key={product._id} className="block">
-               <div className=" m-7 w-60 border border-gray-400 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    className="w-full h-80 object-cover"
-                    src={`${product.images[0]}`}
-                    alt={product.productName || "Product"}
-                  />
-                  <div className="px-4 py-3">
-                    <div className="font-bold text-lg truncate mb-1">
-                      {product.productName}
-                    </div>
-                    <p className="text-gray-600 text-sm mb-2">
-                      {product.productCategory}
-                    </p>
-                     <div className=" mb-5">
-                      <span className="text-white font-bold text-base bg-blue-400 rounded-lg p-1">₹{product.productPrice}</span>
-                    </div>
-                    <button className=" cursor-pointer w-full bg-yellow-300 hover:bg-yellow-400 text-black font-semibold py-2 rounded-full transition-colors">
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-            </Link>
-          ))
-        )}
+      <div className="flex flex-wrap justify-center gap-8 w-full bg-[#fafafa] py-10">
+  {prods.length === 0 ? (
+    <p className="text-center text-gray-500 text-lg">No products found</p>
+  ) : (
+    currentProducts
+      .filter(product => product.isStock === true)
+      .map(product => (
+        <Link
+          to={`/products/${product._id}`}
+          key={product._id}
+          className="group"
+        >
+          <div className="w-64 rounded-2xl bg-white border border-gray-100 overflow-hidden
+                          shadow-sm hover:shadow-2xl transition-all duration-300
+                          hover:-translate-y-1">
+            
+            {/* Image */}
+            <div className="relative">
+              <img
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                src={product.images[0]}
+                alt={product.productName || "Product"}
+              />
 
-      </div>
+              {/* Price badge */}
+              <span className="absolute top-3 right-3 bg-[#1f2937] text-white text-sm font-semibold px-3 py-1 rounded-full">
+                ₹{product.productPrice}
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="px-5 py-4">
+              <h3 className="font-semibold text-gray-900 text-lg truncate">
+                {product.productName}
+              </h3>
+
+              <p className="text-gray-500 text-sm mt-1">
+                {product.productCategory}
+              </p>
+
+              {/* Button */}
+              <button
+                className="mt-4 w-full rounded-full py-2.5 font-medium
+                           bg-yellow-400/70 text-white
+                           hover:bg-[#374151]
+                           transition-colors duration-300"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </Link>
+      ))
+  )}
+</div>
+
       <div className="flex justify-center mt-4 gap-4">
         <button
           onClick={handlePrev}

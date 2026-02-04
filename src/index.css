@@ -63,7 +63,7 @@ background: linear-gradient(
   min-height: 100vh;
   background-attachment: fixed;
   scroll-behavior: smooth;
-
+  color: #111827;
 }
 
 h1 {

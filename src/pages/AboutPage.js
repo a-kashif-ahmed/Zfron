@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Tabs from "../components/Tabs";
 
 function AboutPage() {
     return (
@@ -38,47 +39,25 @@ function AboutPage() {
   </p>
 </div>
 
-            <div className="mb-30 w-full flex justify-center mt-10 z-auto">
-                <div className="flex flex-wrap justify-center gap-5 max-w-6xl">
-                    {/* Card 1*/} 
-                    <div className="relative w-[270px] border border-black p-7 bg-white hover:shadow-lg overflow-hidden rounded-lg">
-                        {/* Decorative Triangles */} 
-                        <div className="absolute bottom-0 left-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-1" />
-                        <div className="absolute top-0 right-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-180" />
-                        <h1 className="text-black text-2xl">We Offer</h1>
-                        <br />
-                        <p className="text-black">
-                            Handpick the best, no endless scrolling through mediocre options.
-                        </p>
-                    </div>
+        <Tabs/>    
+        <div className="min-h-[60vh] flex items-center justify-center px-4">
+  <div
+  className="group relative rounded-2xl p-8
+             bg-white/70 backdrop-blur-md
+             border border-black/10
+             shadow-sm
+             transition-all duration-300
+             hover:-translate-y-2 hover:shadow-xl"
+>
+  {/* LEFT glow */}
+  <div className="absolute inset-0 rounded-2xl opacity-0
+                  group-hover:opacity-100 transition
+                  bg-gradient-to-r from-yellow-200/30 to-transparent" />
 
-                    {/* Card 2*/} 
-                    <div className="relative w-[270px] border border-black p-7 bg-white hover:shadow-lg overflow-hidden rounded-lg">
-                        <div className="absolute bottom-0 left-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-1" />
-                        <div className="absolute top-0 right-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-180" />
-                        <h1 className="text-black text-2xl">Commitment</h1>
-                        <br />
-                        <p className="text-black">Fair pricing for products, You First Policy</p>
-                    </div>
-
-                    {/* Card 3 */} 
-                    <div className="relative w-[270px] border border-black p-7 bg-white hover:shadow-lg overflow-hidden rounded-lg">
-                        <div className="absolute bottom-0 left-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-1" />
-                        <div className="absolute top-0 right-[-10%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-180" />
-                        <h1 className="text-black text-2xl">Why Us?</h1>
-                        <br />
-                        <p className="text-black">
-                            Fast, reliable delivery and friendly customer support who treat you like family.
-                        </p>
-                    </div>
-                </div>
-            </div> 
-            </div>
-
-            <div className="min-h-[60vh] flex items-center justify-center px-4">
-  <div className="max-w-sm w-full rounded-2xl border border-black/10 bg-white/60 backdrop-blur-md shadow-sm p-8 text-center overflow-hidden">
-  <div className="absolute bottom-0 left-[-7%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-1 " />
-                        <div className="absolute top-0 right-[-7%] w-0 h-0 border-l-[25px] border-r-[25px] border-b-[40px] border-l-transparent border-r-transparent border-b-yellow-400 opacity-40 rotate-180" />
+  {/* RIGHT glow */}
+  <div className="absolute inset-0 rounded-2xl opacity-0
+                  group-hover:opacity-100 transition
+                  bg-gradient-to-l from-yellow-200/30 to-transparent" />
     
     <h1 className="text-3xl tracking-tight mb-4">
       Contact Us
@@ -102,6 +81,7 @@ function AboutPage() {
 </div>
 
             <Footer />
+        </div>
         </div>
     )
 }
