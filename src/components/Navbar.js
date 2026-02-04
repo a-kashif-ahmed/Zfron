@@ -49,7 +49,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-x-hidden">
+    <div className="relative w-full overflow-x-hidden max-h-">
       <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm shadow-md z-50 px-3 sm:px-4 lg:px-8 py-2">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-2 text-slate-800">
 
@@ -93,7 +93,7 @@ function Navbar() {
                 >
                   <input
                     type="text"
-                    className="text-black px-2 py-1 rounded border border-black bg-transparent w-32 sm:w-40"
+                    className="text-black  rounded border border-black bg-transparent w-12 sm:w-40"
                     placeholder="Search..."
                     value={searchtext}
                     onChange={(e) => setSearchtext(e.target.value)}
@@ -110,7 +110,7 @@ function Navbar() {
                 className="w-5 h-5 cursor-pointer"
                 onClick={() => {
                   if (searchstate && searchtext.trim()) handleSearch();
-                  else setSearchstate(true);
+                  else setSearchstate(!searchstate);
                 }}
               />
             </li>

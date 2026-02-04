@@ -18,9 +18,9 @@ function Footer() {
                             <a href="/about" class="hover:underline me-4 md:me-6">Contact us</a>
                         </li>
                         
-                        <li>
+                        {/* <li>
                             <a href="/av/login" class="hover:underline me-4 md:me-6">Vendor </a>
-                        </li>
+                        </li> */}
                         {/* <li>
                             <a href="/about" class="hover:underline">Contact</a>
                         </li> */}

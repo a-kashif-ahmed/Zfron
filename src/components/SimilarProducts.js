@@ -42,7 +42,7 @@ useEffect(() => {
                      <div className=" mb-5">
                       <span className="text-white font-bold text-base bg-blue-400 rounded-lg p-1">₹{product.productPrice}</span>
                     </div>
-                    <button className="w-full bg-yellow-300 hover:bg-yellow-400 text-black font-semibold py-2 rounded-full transition-colors">
+                    <button className="pointer-cursor w-full bg-yellow-300 hover:bg-yellow-400 text-black font-semibold py-2 rounded-full transition-colors">
                       Add to Cart
                     </button>
                   </div>

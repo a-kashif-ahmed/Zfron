@@ -2,7 +2,7 @@ import hero from '../assets/hero.jpg';
 
 const ImageSlider = () => {
   return (
-    <div className="z-0 mt-9 relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-xl">
+    <div className="z-0 mt-17 relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-3xl shadow-xl">
       
       {/* Background Image */}
       <img

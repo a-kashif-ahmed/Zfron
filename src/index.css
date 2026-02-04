@@ -53,21 +53,15 @@ body {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  
-  
-
-  background: linear-gradient(
+background: linear-gradient(
     180deg,
     #f8f3ec 0%,
     #fbf8f3 40%,
     #ffffff 100%
   );
+
   min-height: 100vh;
   background-attachment: fixed;
-
-
-
   scroll-behavior: smooth;
 
 }
@@ -230,8 +224,7 @@ form td input {}
 .abouthead {
   font-family: 'Times New Roman', Times, serif;
   font-size: 70px;
-
-  background: linear-gradient(90deg, rgb(62, 58, 58) 37%, rgb(111, 135, 221) 71%);
+  background: linear-gradient(90deg, rgb(46, 45, 43) 37%, rgb(216, 192, 83) 71%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -330,10 +323,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .tabs{
   flex-wrap: wrap;
 }
-  nav {
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    max-width: 1020%;
+nav {
     align-items: inherit;
   }
 
@@ -384,8 +374,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (max-width:426px) {
+
   html {
-    margin: 0%;
+    margin-top: 20%;
     overflow-x: scroll;
     display: flex;
     flex-direction: column;
@@ -396,10 +387,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   nav {
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    max-width: 1020%;
-    align-items: inherit;
+    margin-top: 0%;
+    
+    
   }
 
   .slider {

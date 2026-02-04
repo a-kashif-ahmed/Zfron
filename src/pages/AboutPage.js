@@ -5,7 +5,7 @@ function AboutPage() {
     return (
         <div>
             <Navbar />
-            <div className=" m-7 flex justify-center text-2xl">
+            <div className=" m-7 mt-10 flex justify-center text-2xl  ">
                 <h1 className="abouthead">Welcome to  <span>Zocosto</span></h1>
             </div>
             <div>
