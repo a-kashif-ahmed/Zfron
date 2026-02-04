@@ -8,10 +8,10 @@ function AuthAv(){
     const [pap,setPap] = useState('signup');
 
     return(
-        <div className="mt-20">
+        <div className="">
             <Navbar/>
             <div className="loguserab">
-            <div className="loguser" >
+            <div className="loguser " >
                 <button onClick={()=>setPap('login')} className={pap === "login" ? "active" : ""}>Login</button>
                 <button onClick={()=>setPap('signup')}className={pap === "signup" ? "active" : ""}>Signup</button>
                 

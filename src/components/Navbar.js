@@ -81,10 +81,10 @@ function Navbar() {
             )}
 
             <li><a href="/category" className="text-black hover:underline">Category</a></li>
-
+            <li>
             {/* Search */}
             {searchstate && (
-              <li>
+              
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -93,16 +93,16 @@ function Navbar() {
                 >
                   <input
                     type="text"
-                    className="text-black  rounded border border-black bg-transparent w-12 sm:w-40"
+                    className="text-black  rounded border border-black bg-transparent w-12 "
                     placeholder="Search..."
                     value={searchtext}
                     onChange={(e) => setSearchtext(e.target.value)}
                     autoFocus
                   />
                 </form>
-              </li>
+              
             )}
-
+</li>
             <li>
               <img
                 src={searchpng}
@@ -127,6 +127,7 @@ function Navbar() {
                   <option value="/login">User</option>
                   <option value="/av/login">Vendor</option>
                 </select>
+                
               </li>
             ) : (
               <>

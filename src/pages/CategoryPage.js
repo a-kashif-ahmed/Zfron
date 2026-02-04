@@ -53,7 +53,7 @@ function CategoryPage() {
   return (
     <div>
       <Navbar />
-      <h1 className="m-3 text-center text-5xl">{selectedCategory || "All"} Collections</h1>
+      <h1 className="m-3 mt-10 text-center text-5xl">{selectedCategory || "All"} Collections</h1>
 
       {subcategoryMap[selectedCategory] && (
         <ul className="flex gap-2 justify-center flex-wrap my-5">

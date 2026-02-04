@@ -233,7 +233,7 @@ form td input {}
   font-family: 'Head';
 }
 .aboutpara{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:serif
 }
 
 .bxs {
@@ -401,6 +401,7 @@ nav {
 }
 
   .loguser {
+    margin-top: 40%;
     display: flex;
     justify-content: center;
   }
@@ -410,6 +411,7 @@ nav {
   }
 
   .logform {
+    
     margin-left: -120%;
     margin-right: 100%;
     font-size: small;

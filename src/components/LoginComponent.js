@@ -50,7 +50,7 @@ setLoading(true);
   };
 
   return (
-    <div className="origin-center mt-30">
+    <div className="origin-center ">
       
 
       <div className="logform">
@@ -80,11 +80,8 @@ setLoading(true);
           </table>
         </form>
 
-        <div className="flex">
-          <a className="text-center m-2 p-1" href="/signup">
-            <p>Create an account</p>
-          </a>
-          <br />
+        <div className="flex justify-center">
+          
           <a className="text-center m-2 p-1" href="/generateotp">
             <p>Reset Password</p>
           </a>
